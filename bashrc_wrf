@@ -1,0 +1,49 @@
+# Include these lines at end of .bashrc from user that runs WRF
+
+# WRF
+export ROOT="/home/operacao"
+export WRF="$ROOT/WRF"
+export DOWNLOADS="$WRF/Downloads"
+export WRF_EM_CORE=1
+export WRF_NMM_CORE=0
+export WRFIO_NCD_LARGE_FILE_SUPPORT=1 # permite suporte de arquivos maiores que 2GB
+
+# Libraries compile locally
+export NETCDF="$WRF/LIBRARIES/netcdf"
+export NETCDFPATH="$WRF/LIBRARIES/netcdf"
+export NETCDF_LIB="$NETCDF/lib"
+export NETCDF_INC="$NETCDF/include"
+export HDF5="$WRF/LIBRARIES/hdf5"
+export MPICH="$WRF/LIBRARIES/mpich"
+
+# Jasper, libpng e zlib installed at same directory: GRIB.
+export GRIB="$WRF/LIBRARIES/grib"
+
+# Libraries
+export LIBPNG=$GRIB   #"$WRF/LIBRARIES/libpng"
+export JASPER=$GRIB   #"$WRF/LIBRARIES/jasper"
+export ZLIB=$GRIB     #"$WRF/LIBRARIES/zlib"
+export JASPERLIB="$JASPER/lib"
+export JASPERINC="$JASPER/include"
+
+# Compilers
+export FC=gfortran    # ifort
+export F77=gfortran   # ifort
+export CC=gcc         # icc
+export CXX=g++        # icpc
+export FCFLAGS=-m64
+export FFLAGS=-m64
+
+# Flags
+export CPPFLAGS="-I$HDF5/include -I$ZLIB/include -I$NETCDF/include -I$LIBPNG/include"
+export LDFLAGS="-L$HDF5/lib -L$ZLIB/lib -L$NETCDF/lib -L$LIBPNG/lib"
+
+# SYSTEM PATHS
+export PATH="$NETCDF/bin:$PATH"
+export PATH="$MPICH/bin:$PATH"
+
+export LD_LIBRARY_PATH="$MPICH/lib:$LD_LIBRARY_PATH"  
+export LD_LIBRARY_PATH="$HDF5/lib:$LD_LIBRARY_PATH" 
+export LD_LIBRARY_PATH="$ZLIB/lib:$LD_LIBRARY_PATH" 
+export LD_LIBRARY_PATH="$NETCDF/lib:$LD_LIBRARY_PATH" 
+export LD_LIBRARY_PATH="$LIBPNG/lib:$LD_LIBRARY_PATH"
