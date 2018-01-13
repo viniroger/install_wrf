@@ -1,2 +1,3 @@
-# install_wrf
-Files to make WRF installation easier
+# Files to make WRF installation easier
+
+Follows instructions at https://www.monolitonimbus.com.br/wrf (portuguese)
