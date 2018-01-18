@@ -8,7 +8,7 @@
 
 &io
  input_root_name = '../WRFV3/run/wrfout_d01_2000-01-24_12:00:00'
- output_root_name = './outputExemplo'
+ output_root_name = '../output/outputExemplo'
  plot = 'all_list'
  fields = 'height,pressure,tk,tc'
  mercator_defs = .true.
