@@ -49,6 +49,6 @@ export LD_LIBRARY_PATH="$NETCDF/lib:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH="$LIBPNG/lib:$LD_LIBRARY_PATH"
 
 # GrADS
-export PATH=$WRF/LIBRARIES/grads:$PATH
-export GADDIR=$WRF/LIBRARIES/grads/Resources/SupportData
-export GASCRP=$GADDIR
+export PATH="$WRF/LIBRARIES/grads:$PATH"
+export GADDIR="$WRF/LIBRARIES/grads/Resources/SupportData"
+export GASCRP="$GADDIR"
